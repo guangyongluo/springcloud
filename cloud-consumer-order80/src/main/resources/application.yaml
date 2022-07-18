@@ -1,0 +1,8 @@
+server:
+  port: 80
+
+payment:
+  url:
+    basic: http://localhost:8001
+    create: /payment/create
+    find: /payment/findPaymentById/
