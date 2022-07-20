@@ -1,8 +1,8 @@
 package com.vilin.springcloud.controller;
 
-import com.vilin.springcloud.service.PaymentService;
 import com.vilin.springcloud.entities.CommonResult;
 import com.vilin.springcloud.entities.Payment;
+import com.vilin.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,7 +20,7 @@ public class PaymentController {
   @PostMapping(value = "/payment/create")
   public CommonResult createPayment(@RequestBody Payment payment) {
     int result = paymentService.savePayment(payment);
-    log.info("========insert payment number : " + serverPort, result);
+    log.info("========insert payment number : {} server port : " + serverPort, result);
 
     if (result > 0) {
       return new CommonResult(200, "insert successfully. {} server port : " + serverPort, result);
