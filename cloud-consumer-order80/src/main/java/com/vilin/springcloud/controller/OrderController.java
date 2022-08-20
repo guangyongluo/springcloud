@@ -1,8 +1,8 @@
 package com.vilin.springcloud.controller;
 
-import com.vilin.springcloud.contants.UrlConstants;
 import com.vilin.springcloud.entities.CommonResult;
 import com.vilin.springcloud.entities.Payment;
+import com.vilin.springcloud.contants.UrlConstants;
 import com.vilin.springcloud.lb.LoadBalance;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

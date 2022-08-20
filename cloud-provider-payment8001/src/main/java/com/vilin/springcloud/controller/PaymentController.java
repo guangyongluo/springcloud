@@ -1,12 +1,14 @@
 package com.vilin.springcloud.controller;
 
-import com.vilin.springcloud.service.PaymentService;
 import com.vilin.springcloud.entities.CommonResult;
 import com.vilin.springcloud.entities.Payment;
+import com.vilin.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -43,6 +45,16 @@ public class PaymentController {
 
   @GetMapping("/payment/lb")
   public String getPaymentLB() {
+    return serverPort;
+  }
+
+  @GetMapping("/payment/feign/timeout")
+  public String getFeignTimeOut() {
+    try {
+      TimeUnit.SECONDS.sleep(3);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
     return serverPort;
   }
 }

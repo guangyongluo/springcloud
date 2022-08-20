@@ -1,4 +1,4 @@
-package com.vilin.ribbon;
+package com.vilin.springcloud.ribbon;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
