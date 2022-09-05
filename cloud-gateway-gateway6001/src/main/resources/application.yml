@@ -1,0 +1,36 @@
+server:
+  port: 6001
+
+spring:
+  application:
+    name: cloud-gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: payment_route_find_payment
+          uri: lb://cloud-payment-service:8001
+          predicates:
+            - Path=/payment/findPaymentById/**
+
+        - id: payment_route_payment_lb
+          uri: lb://cloud-payment-service:8001
+          predicates:
+            - Path=/payment/lb
+            - After=2022-09-05T15:58:39.091202+08:00[Asia/Shanghai]
+            #- Cookie=username,xy
+            #- Header=X-Request-Id,\d+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+  instance:
+    instance-id: gateway6001
+    prefer-ip-address: true
