@@ -28,6 +28,9 @@
         <module>cloud-hystrix-dashboard9001</module>
         <module>cloud-hystrix-turbine</module>
         <module>cloud-gateway-gateway6001</module>
+        <module>cloud-config-center5001</module>
+        <module>cloud-config-client5002</module>
+        <module>cloud-config-client5003</module>
     </modules>
 
     <properties>
