@@ -28,12 +28,15 @@
         <module>cloud-hystrix-dashboard9001</module>
         <module>cloud-hystrix-turbine</module>
         <module>cloud-gateway-gateway6001</module>
-        <module>cloud-config-center5001</module>
-        <module>cloud-config-client5002</module>
+        <module>cloud-config-center5001</module>        <module>cloud-config-client5002</module>
         <module>cloud-config-client5003</module>
         <module>cloud-stream-rabbitmq-provider8801</module>
         <module>cloud-stream-rabbitmq-consumer8802</module>
         <module>cloud-stream-rabbitmq-consumer8803</module>
+        <module>cloudalibaba-provider-payment9001</module>
+        <module>cloudalibaba-provider-payment9002</module>
+        <module>cloudalibaba-consumer-order80</module>
+        <module>cloudalibaba-nacos-config-client7001</module>
     </modules>
 
     <properties>

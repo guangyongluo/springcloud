@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: cloud-alibaba-config
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:1111
+      config:
+        server-addr: localhost:1111
+        file-extension: yaml
+        group: DEV_GROUP
+        # group: QA_GROUP
+        namespace: 03f7914f-707d-49bd-a2b0-0a5b6c1a9367
+  profiles:
+    active: dev
+  # active: info
+  # active: qa
