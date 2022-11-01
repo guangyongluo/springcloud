@@ -1,0 +1,36 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-order-service
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+      web-context-unify: false
+management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+#setup OpenFeign client timeout (OpenFeign support ribbon by default)
+ribbon:
+  #connect time out
+  ReadTimeout: 5000
+  #read source time out
+  ConnectTimeout: 5000
+
+feign:
+  sentinel:
+    enabled: true
+
+payment:
+  url:
+    basic: http://cloud-payment-service
+    find: /payment/findPaymentById/
+

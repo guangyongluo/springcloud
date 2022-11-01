@@ -28,7 +28,8 @@
         <module>cloud-hystrix-dashboard9001</module>
         <module>cloud-hystrix-turbine</module>
         <module>cloud-gateway-gateway6001</module>
-        <module>cloud-config-center5001</module>        <module>cloud-config-client5002</module>
+        <module>cloud-config-center5001</module>
+        <module>cloud-config-client5002</module>
         <module>cloud-config-client5003</module>
         <module>cloud-stream-rabbitmq-provider8801</module>
         <module>cloud-stream-rabbitmq-consumer8802</module>
@@ -37,6 +38,10 @@
         <module>cloudalibaba-provider-payment9002</module>
         <module>cloudalibaba-consumer-order80</module>
         <module>cloudalibaba-nacos-config-client7001</module>
+        <module>cloudalibaba-sentinel-service8801</module>
+        <module>cloudalibaba-sentinel-consumer-order80</module>
+        <module>cloudalibaba-sentinel-provider-payment8001</module>
+        <module>cloudalibaba-sentinel-provider-payment8002</module>
     </modules>
 
     <properties>
@@ -45,7 +50,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <spring.boot-version>2.3.12.RELEASE</spring.boot-version>
         <spring.cloud-version>Hoxton.SR12</spring.cloud-version>
-        <spring.cloud.alibaba-version>2.1.2.RELEASE</spring.cloud.alibaba-version>
+        <spring.cloud.alibaba-version>2.2.9.RELEASE</spring.cloud.alibaba-version>
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.18.16</lombok.version>
